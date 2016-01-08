@@ -1,22 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Places Around the World fit for Digital Nomads</h1>
-
-
 <div class="container-fluid">
-  <% @places.each do |place| %>
-    <div class="row">
-      <div class="col-md-12 place-box" style="background: linear-gradient(
-      rgba(0, 0, 0, 0.45), 
-      rgba(0, 0, 0, 0.45)
-    ), url('../assets/<%= place.image_url %>') no-repeat;">
-        <p class="overlay-title"><%= place.name %></p>
-        <p class="overlay-description"><%= place.description %></p>
-        <p class="overlay-description"><%= link_to 'Show', place %></p>
-        <p class="overlay-description"><%= link_to 'Edit', edit_place_path(place) %></p>
-        <p class="overlay-description"><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      </div>
+
+  <div class="row header">
+    <div class="col-md-12 centered">
+      <h1 class ="page-title">Places Around the World fit for Digital Nomads</h1>
     </div>
+  </div>
+  <% @places.each do |place| %>
+  <div class="row">
+    <div class="col-md-12 place-box centered" style="background: linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)
+  ), url('../assets/<%= place.image_url %>') no-repeat;">
+      <p class="overlay-title"><%= place.name %></p>
+      <p class="overlay-description"><%= place.description %></p>
+      <p class="overlay-description"><%= link_to 'Show', place %></p>
+      <p class="overlay-description"><%= link_to 'Edit', edit_place_path(place) %></p>
+      <p class="overlay-description"><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  </div>
   <% end %>
 </div>
 
