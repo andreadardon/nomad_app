@@ -10,5 +10,49 @@
   <%= @place.description %>
 </p>
 
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
+
+
+<div class="row">
+  <div class="col-md-4 centered sq">
+    <br>
+    <i class="fa fa-wifi"></i>
+    <p class="text-sq-1">Internet Speed</p>
+    <p class="text-sq-2"><%= @place.internet_speed %></p>
+  </div>
+  <div class="col-md-4 centered sq">
+    <br>
+    <i class="fa fa-suitcase"></i>
+    <p class="text-sq-1">Is this a Short Term Rental?</p>
+    <p class="text-sq-2"><%= @place.short_term_rental %></p>
+  </div>
+  <div class="col-md-4 centered  sq">
+    <br>
+    <i class="fa fa-bullhorn"></i>
+    <p class="text-sq-1">Level of Noise in the Apartment?</p>
+    <p class="text-sq-2"><%= @place.level_of_noise %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 centered sq">
+    <br>
+    <i class="fa fa-street-view"></i>
+    <p class="text-sq-1">Walkability</p>
+    <p class="text-sq-2"><%= @place.walkability%></p>
+  </div>
+  <div class="col-md-4 centered sq">
+    <br>
+    <i class="fa fa-cutlery"></i>
+    <p class="text-sq-1">Food</p>
+    <p class="text-sq-2"><%= @place.food%></p>
+  </div>
+  <div class="col-md-4 centered  sq">
+    <br>
+    <i class="fa fa-spinner"></i>
+    <p class="text-sq-1">AC/Heating</p>
+    <p class="text-sq-2"><%= @place.ac_heater%></p>
+  </div>
+</div>
