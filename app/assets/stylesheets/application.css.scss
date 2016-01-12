@@ -20,10 +20,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.nav {
-	background-color: #342F39;
+.navbar {
+	background-color: #40334E;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
 }
 
-.body {
-	background-color: #C34D49;
+.nav {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+
+.footer {
+	background-color: #CDDC39;
+	height: 40px;
+}
+
+.footer-text {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	color: white;
 }
