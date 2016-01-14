@@ -14,16 +14,10 @@
     rgba(0, 0, 0, 0.45)
   ), url('../assets/<%= place.image_url %>') no-repeat;">
       <p class="overlay-title"><%= place.name %></p>
-      <p class="overlay-description"><%= place.description %></p>
-      <p class="overlay-description"><%= link_to 'Show', place %></p>
-      <p class="overlay-description"><%= link_to 'Edit', edit_place_path(place) %> <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <p class="overlay-description"><%= link_to 'See More', place %></p>
       <p class="overlay-description"></p>
     </div>
   </div>
   <% end %>
 </div>
-
-
-<br>
-
 

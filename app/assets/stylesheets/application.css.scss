@@ -20,6 +20,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: white;
+}
+
+a {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	color: white;
+}
+
 .navbar {
 	background-color: #40334E;
 	font-family: 'Open Sans', sans-serif;
@@ -33,8 +50,9 @@
 
 
 .footer {
-	background-color: #CDDC39;
-	height: 40px;
+	background-color: #BFCC3E;
+	height: 60px;
+	padding-top: 20px;
 }
 
 .footer-text {
