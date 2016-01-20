@@ -19,6 +19,30 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+  <div class="field">
+    <%= f.label :internet_speed %><br>
+    <%= f.select :internet_speed, [['<10mbps','<10mbpst'],['10mbps-30mbps','10mbps-30mbps'],['>30mbps','>30mbps']] %>
+  </div>
+  <div class="field">
+    <%= f.label :is_this_a_short_term_rental_? %><br>
+    <%= f.select :internet_speed, [['Yes','yes'],['No','no']] %>
+  </div>
+  <div class="field">
+    <%= f.label :level_of_noise %><br>
+    <%= f.select :internet_speed, [['Great','great'],['Okay','okay'],['Bad','bad']] %>
+  </div>
+  <div class="field">
+    <%= f.label :walkability %><br>
+    <%= f.select :internet_speed, [['Great','great'],['Okay','okay'],['Bad','bad']] %>
+  </div>
+  <div class="field">
+    <%= f.label :food %><br>
+    <%= f.select :internet_speed, [['Kitchen','kitchen'],['Supermarkets','supermarkets'],['Restaurants','restaurants']] %>
+  </div>
+  <div class="field">
+    <%= f.label :ac_or_heater %><br>
+    <%= f.select :internet_speed, [['AC and Heating','ac and heating'],['Only AC','only ac'],['Only Heating','only heating'],['None','none'],['Other','other']] %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
