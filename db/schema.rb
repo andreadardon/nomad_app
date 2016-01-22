@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160111093111) do
+ActiveRecord::Schema.define(version: 20160121162256) do
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160111093111) do
     t.string   "walkability"
     t.string   "food"
     t.string   "ac_heater"
+    t.string   "link"
   end
 
 end

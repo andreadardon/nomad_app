@@ -25,17 +25,23 @@ body {
 	background-color: white;
 }
 
-a {
+.navbar .nav > li > a {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
+.viewplace  {
 	color: white;
 }
 
-a:visited {
+.viewplace:visited {
 	color: white;
 }
 
-a:hover {
+.viewplace:hover {
 	color: white;
 }
+
 
 .navbar {
 	background-color: #40334E;

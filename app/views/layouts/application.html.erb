@@ -22,12 +22,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="">Nomad Approved</a>
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="../assets/NomadAppLogo.png" style="height: 35px;">
+        </a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home", places_path %></li>
-          <li><%= link_to "About", places_path %></li>
+          <li><%= link_to "Create New Place", new_place_path %></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

@@ -25,23 +25,27 @@
   </div>
   <div class="field">
     <%= f.label :is_this_a_short_term_rental_? %><br>
-    <%= f.select :internet_speed, [['Yes','yes'],['No','no']] %>
+    <%= f.select :short_term_rental, [['Yes','Yes'],['No','No']] %>
   </div>
   <div class="field">
     <%= f.label :level_of_noise %><br>
-    <%= f.select :internet_speed, [['Great','great'],['Okay','okay'],['Bad','bad']] %>
+    <%= f.select :level_of_noise, [['Great','Great'],['Okay','Okay'],['Bad','Bad']] %>
   </div>
   <div class="field">
     <%= f.label :walkability %><br>
-    <%= f.select :internet_speed, [['Great','great'],['Okay','okay'],['Bad','bad']] %>
+    <%= f.select :walkability, [['Great','Great'],['Okay','Okay'],['Bad','Bad']] %>
   </div>
   <div class="field">
     <%= f.label :food %><br>
-    <%= f.select :internet_speed, [['Kitchen','kitchen'],['Supermarkets','supermarkets'],['Restaurants','restaurants']] %>
+    <%= f.select :food, [['Kitchen','Kitchen'],['Supermarkets','Supermarkets'],['Restaurants','Restaurants'], ['All','All']] %>
   </div>
   <div class="field">
     <%= f.label :ac_or_heater %><br>
-    <%= f.select :internet_speed, [['AC and Heating','ac and heating'],['Only AC','only ac'],['Only Heating','only heating'],['None','none'],['Other','other']] %>
+    <%= f.select :ac_heater, [['AC and Heating','Ac and Heating'],['Only AC','Only Ac'],['Only Heating','Only Heating'],['None','None'],['Other','Other']] %>
+  </div>
+  <div class="field">
+    <%= f.label :link_to_book_this_place %><br>
+    <%= f.text_field :link %>
   </div>
   <div class="actions">
     <%= f.submit %>

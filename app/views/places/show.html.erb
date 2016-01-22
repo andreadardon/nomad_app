@@ -16,12 +16,15 @@
   </div>
 
   <div class="row">
-    <div class="col-md-4">
+    <br>
+    <div class="col-md-6">
       <br>
       <h3 class="show-title"><%= @place.name %></h3>
       <h5 class="show-description"><%= @place.description %></h5>
+      <p class="show-description"><a class="bookplace" href="<%= @place.link %>" target="_blank">Book This Place</a></p>
     </div>
-    <div class="col-md-2 col-md-offset-2 centered sq">
+
+    <div class="col-md-2  centered sq">
       <br>
       <i class="fa fa-wifi"></i>
       <p class="text-sq-1">Internet Speed</p>
@@ -39,6 +42,7 @@
       <p class="text-sq-1">Level of Noise in the Apartment?</p>
       <p class="text-sq-2"><%= @place.level_of_noise %></p>
     </div>
+
   </div>
 
   <div class="row">
@@ -61,6 +65,7 @@
       <p class="text-sq-2"><%= @place.ac_heater%></p>
     </div>
   </div>
+  
 
   <br>
   <br>
