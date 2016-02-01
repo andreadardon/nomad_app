@@ -11,8 +11,8 @@ body {
 }
 
 .header {
-	background-color: #C34D49;
-	color: white;
+	/*background-color: #C34D49;*/
+	color: #333;
 	padding-bottom: 20px;
 }
 
@@ -21,31 +21,48 @@ body {
 	font-weight: 300;
 }
 
+.page-description {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
 .place-box {
+	height: 400px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-clip: border-box;
-    height: 400px;
+}
+
+.places {
+	padding-top: 20px;
 }
 
 .overlay-title {
-	padding-top: 200px;
-
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: 40px;
-	color:white;
-	text-align: center;
-}
-
-.overlay-description {
-	padding-top: 20px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 20px;
-	color:white;
+	color: white;
 	text-align: center;
+	padding-top: 100px;
+}
+
+.overlay-description {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	color: white;
+	text-align: justify;
+	padding-top: 20px;
+}
+
+.overlay-link {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
 }
 
 .centered {

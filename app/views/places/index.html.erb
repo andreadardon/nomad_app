@@ -1,23 +1,94 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container-fluid">
-
   <div class="row header">
     <div class="col-md-12 centered">
-      <h1 class ="page-title">Places Around the World fit for Digital Nomads</h1>
+      <h1 class="page-title">Places Around the World fit for Digital Nomads</h1>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <p class="page-description centered">We're not just tourists. We're Digital Nomads and it can be hard to find places <br> that fit our requirements: High-Speed Internet, short term leases, a good city. <br><br> Click around to find places around the world that have been approved by nomads like you! </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/latin-america.png" style="height: 100px;" >
+          <a href="latinamerica_places.html"><h6>Latin America</h6></a>
+          <p>10 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img class="img-circle" src="../assets/oceania.png" style="height: 100px;" >
+          <h6>South East Asia, Australia <br> and New Zealand</h6>
+          <p>16 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/europe.png" style="height: 100px;" >
+          <h6>Europe</h6>
+          <p>20 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/north-america.png" style="height: 100px;" >
+          <h6>North America</h6>
+          <p>16 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/africa.png" style="height: 100px;" >
+          <h6>Africa</h6>
+          <p>5 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/asia.png" style="height: 100px;" >
+          <a href="latinamerica_places.html"><h6>Asia</h6></a>
+          <p>10 places</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <% @places.each do |place| %>
   <div class="row">
-    <div class="col-md-12 place-box centered" style="background: linear-gradient(
+    <div class="col-md-12 place-box" style="background: linear-gradient(
     rgba(0, 0, 0, 0.45), 
     rgba(0, 0, 0, 0.45)
   ), url('../assets/<%= place.image_url %>') no-repeat;">
-      <p class="overlay-title"><%= place.name %></p>
-      <p class="overlay-description"><%= link_to 'See More', place %></p>
-      <p class="overlay-description"></p>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+          <p class="overlay-title"><%= place.name %></p>
+          <p class="overlay-description"><%= place.description %></p>
+        </div>
+      </div>
+      <p class="overlay-link"><%= link_to 'See More', place %></p>
     </div>
   </div>
   <% end %>
 </div>
-
