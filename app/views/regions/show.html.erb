@@ -1,10 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @region.name %>
 
-</p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 centered">
+		  <h1><%= @region.name %></h1>
+		  <br>
+	  </div>
+	</div>
+
+
+	
+	<% @region.places.each do |p| %>
+  <div class="row">
+
+	  <div class="col-md-12 show-region">
+	  	<div class="row">
+	  		<div class="col-md-6">
+			  	<%= p.name %> 
+			  	<br>
+					<%= truncate(p.description,:length => 140)  %>
+				</div>
+				<div class="col-md-6">
+			  	<span class="flag-icon flag-icon-hr"></span>
+			  </div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+				<a class="btn btn-default" href="#" role="button">See More</a>
+				</div>
+			</div>
+	  </div>
+	  
+  </div>
+  <br>
+    	<% end %>
+ </div>
+
 
 <%= link_to 'Edit', edit_region_path(@region) %> |
 <%= link_to 'Back', regions_path %>
