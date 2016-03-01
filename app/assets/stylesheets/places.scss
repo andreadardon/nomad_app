@@ -24,6 +24,7 @@ body {
 .page-description {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+	font-size: 16px;
 }
 
 .place-box {
@@ -69,6 +70,18 @@ body {
 	text-align: center;
 }
 
+.region-tile {
+	background-color: #F1F1F1;
+}
+
+.first-row-regions {
+	padding-bottom: 20px;
+}
+
+.second-row-regions {
+	padding-bottom: 50px;
+}
+
 /*Show Page*/
 
 
@@ -106,4 +119,10 @@ body {
 
 .show-region {
 	border: 1px solid #333;
+}
+
+/*New Place*/
+
+.new-place-form {
+	background-color: #f1f1f1;
 }

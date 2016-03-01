@@ -4,6 +4,7 @@ gem 'rails',        '4.2.2'
 gem 'sass-rails',   '5.0.2'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
+gem 'countries'
 
 gem 'uglifier',     '2.5.3'
 gem 'coffee-rails', '4.1.0'

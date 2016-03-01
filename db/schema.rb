@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160202172942) do
+ActiveRecord::Schema.define(version: 20160212122235) do
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20160202172942) do
     t.string   "ac_heater"
     t.string   "link"
     t.integer  "region_id"
+    t.string   "country"
+    t.string   "city"
   end
 
   create_table "regions", force: :cascade do |t|

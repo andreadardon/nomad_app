@@ -16,18 +16,20 @@
 
 	  <div class="col-md-12 show-region">
 	  	<div class="row">
-	  		<div class="col-md-6">
+	  		<div class="col-md-8 show-description">
 			  	<%= p.name %> 
 			  	<br>
 					<%= truncate(p.description,:length => 140)  %>
 				</div>
-				<div class="col-md-6">
-			  	<span class="flag-icon flag-icon-hr"></span>
+				<div class="col-md-2 col-md-offset-2">
+					<div clas="flag-wrapper">
+			  		<img src="/assets/flags/1x1/hr.svg" class="img-circle flag">
+			  	</div>
 			  </div>
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-				<a class="btn btn-default" href="#" role="button">See More</a>
+				<%= link_to "See More", p, :class => "btn btn-default" %>
 				</div>
 			</div>
 	  </div>

@@ -3,8 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
 .flag {
-	background-color: lightblue;
-	
+	width: 60px;
+	height: auto;
+}
+
+/*.flag-wrapper {
+	padding-top: 50px;
+}*/
+
+.show-region {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.show-description {
+	padding-bottom: 20px;
 }

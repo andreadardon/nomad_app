@@ -1,27 +1,90 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Regions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @regions.each do |region| %>
-      <tr>
-        <td><%= region.name %></td>
-        <td><%= link_to 'Show', region %></td>
-        <td><%= link_to 'Edit', edit_region_path(region) %></td>
-        <td><%= link_to 'Destroy', region, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<% @regions.each do |region| %>
+<div class="container-fluid">
+  <div class="row header">
+    <div class="col-md-12 centered">
+      <h1 class="page-title">Places Around the World fit for Digital Nomads</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <p class="page-description centered">We're not just tourists. We're Digital Nomads and it can be hard to find places <br> that fit our requirements: High-Speed Internet, short term leases, a good city. <br><br> Click on a region of the world to find places that have been approved by nomads like you! </p>
+    </div>
+  </div>
+  <div class="row first-row-regions">
+    <div class="col-md-2 col-md-offset-3">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered region-image">
+          <br>
+          <img src="../assets/latin-america.png" style="height: 150px;">
+          <%= region.name %>
+          <!-- <a href="latinamerica_places.html"><h6>Latin America</h6></a> -->
+          <%= link_to 'Latin America', region %>
+          <p>10 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img class="img-circle" src="../assets/oceania.png" style="height: 140px;" >
+          <%= region.name %>
+          <!-- <h6>South East Asia, Australia <br> and New Zealand</h6> -->
+          <%= link_to 'South East Asia', region %>
+          <p>16 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/europe.png" style="height: 150px;">
+          <h6><%= region.name %></h6>
+          <%= link_to 'Europe', region %>
+          <p>20 places</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row second-row-regions">
+    <div class="col-md-2 col-md-offset-3">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/north-america.png" style="height: 150px;" >
+          <h6><%= region.name %></h6>
+          <%= link_to 'North America', region %>
+          <p>16 places</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/africa.png" style="height: 150px;" >
+          <h6><%= region.name %></h6>
+          <%= link_to 'Africa', region %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div style="position: relative;" class="region-tile">
+        <div class="centered">
+          <br>
+          <img src="../assets/asia.png" style="height: 150px;" >
+          <h6><%= region.name %></h6>
+          <%= link_to 'Asia', region %>
+          <p>10 places</p>
+        </div>
+      </div>
+    </div>
+  </div>
     <% end %>
-  </tbody>
-</table>
+  
+</div>
 
-<br>
-
-<%= link_to 'New Region', new_region_path %>
+  
