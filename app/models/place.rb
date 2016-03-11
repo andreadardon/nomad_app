@@ -1,3 +1,4 @@
 class Place < ActiveRecord::Base
-	belongs_to :region
+	self.inheritance_column = "foo"
+	belongs_to :country
 end

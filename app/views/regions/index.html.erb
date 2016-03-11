@@ -1,7 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<% @regions.each do |region| %>
-<div class="container-fluid">
+<div class="container">
   <div class="row header">
     <div class="col-md-12 centered">
       <h1 class="page-title">Places Around the World fit for Digital Nomads</h1>
@@ -13,78 +10,22 @@
     </div>
   </div>
   <div class="row first-row-regions">
-    <div class="col-md-2 col-md-offset-3">
-      <div style="position: relative;" class="region-tile">
-        <div class="centered region-image">
-          <br>
-          <img src="../assets/latin-america.png" style="height: 150px;">
-          <%= region.name %>
-          <!-- <a href="latinamerica_places.html"><h6>Latin America</h6></a> -->
-          <%= link_to 'Latin America', region %>
-          <p>10 places</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div style="position: relative;" class="region-tile">
-        <div class="centered">
-          <br>
-          <img class="img-circle" src="../assets/oceania.png" style="height: 140px;" >
-          <%= region.name %>
-          <!-- <h6>South East Asia, Australia <br> and New Zealand</h6> -->
-          <%= link_to 'South East Asia', region %>
-          <p>16 places</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div style="position: relative;" class="region-tile">
-        <div class="centered">
-          <br>
-          <img src="../assets/europe.png" style="height: 150px;">
-          <h6><%= region.name %></h6>
-          <%= link_to 'Europe', region %>
-          <p>20 places</p>
-        </div>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="row">
+        <% @regions.all.each do |r| %>
+          <%= link_to r do %>
+            <div class="col-md-4  ">
+              <div style="position: relative;" class="region-tile">
+                <div class="centered region-image" >
+                  <br>
+                  <img src="../assets/<%= r.image_url %>" style="height: 120px;">
+                  <p style="font-size:12px;"><%= r.name %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
-  <div class="row second-row-regions">
-    <div class="col-md-2 col-md-offset-3">
-      <div style="position: relative;" class="region-tile">
-        <div class="centered">
-          <br>
-          <img src="../assets/north-america.png" style="height: 150px;" >
-          <h6><%= region.name %></h6>
-          <%= link_to 'North America', region %>
-          <p>16 places</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div style="position: relative;" class="region-tile">
-        <div class="centered">
-          <br>
-          <img src="../assets/africa.png" style="height: 150px;" >
-          <h6><%= region.name %></h6>
-          <%= link_to 'Africa', region %>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div style="position: relative;" class="region-tile">
-        <div class="centered">
-          <br>
-          <img src="../assets/asia.png" style="height: 150px;" >
-          <h6><%= region.name %></h6>
-          <%= link_to 'Asia', region %>
-          <p>10 places</p>
-        </div>
-      </div>
-    </div>
-  </div>
-    <% end %>
-  
 </div>
-
-  

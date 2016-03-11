@@ -1,73 +1,65 @@
 <style>
   .fa {
     color: #CDDC39;
-    font-size: 40px;
+    font-size: 30px;
   }
 </style>
 
 <p id="notice"><%= notice %></p>
 
-
 <div class="container">
-  <div class="row picture-row">
-    <div class="col-md-12 centered" >
-      <img src="../assets/<%= @place.image_url %>" style="width:1150px; height:auto;"> 
-    </div>
-  </div>
 
   <div class="row">
     <br>
-    <div class="col-md-6">
-      <br>
+    <div class="col-md-12 centered">
       <h3 class="show-title"><%= @place.name %></h3>
-      <h5 class="show-description"><%= @place.description %></h5>
-      <p class="show-description"><a class="bookplace" href="<%= @place.link %>" target="_blank">Book This Place</a></p>
     </div>
-
-    <div class="col-md-2  centered sq">
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-2 centered sq">
       <br>
       <i class="fa fa-wifi"></i>
-      <p class="text-sq-1">Internet Speed</p>
-      <p class="text-sq-2"><%= @place.internet_speed %></p>
+      <p class="text-sq-1">Internet Speed <br> <%= @place.internet_speed %></p>
     </div>
     <div class="col-md-2 centered sq">
       <br>
       <i class="fa fa-suitcase"></i>
-      <p class="text-sq-1">Is this a Short Term Rental?</p>
-      <p class="text-sq-2"><%= @place.short_term_rental %></p>
+      <p class="text-sq-1">Type of Place <br> <%= @place.type %></p>
+    </div>
+    <div class="col-md-2 centered sq">
+      <br>
+      <i class="fa fa-street-view"></i>
+      <p class="text-sq-1">Walkability <br> <%= @place.walkability%></p>
     </div>
     <div class="col-md-2 centered  sq">
       <br>
       <i class="fa fa-bullhorn"></i>
-      <p class="text-sq-1">Level of Noise in the Apartment?</p>
-      <p class="text-sq-2"><%= @place.level_of_noise %></p>
+      <p class="text-sq-1">Level of Noise <br> <%= @place.level_of_noise %></p>
     </div>
-
   </div>
 
   <div class="row">
-    <div class="col-md-2 col-md-offset-6 centered sq">
-      <br>
-      <i class="fa fa-street-view"></i>
-      <p class="text-sq-1">Walkability</p>
-      <p class="text-sq-2"><%= @place.walkability%></p>
+    <div class="col-md-4">
+      <h5 class="show-description"><%= @place.description %></h5>
+      <p class="show-description"><a class="bookplace" href="<%= @place.link %>" target="_blank">Book This Place</a></p>
     </div>
-    <div class="col-md-2 centered sq">
-      <br>
-      <i class="fa fa-cutlery"></i>
-      <p class="text-sq-1">Food</p>
-      <p class="text-sq-2"><%= @place.food%></p>
-    </div>
-    <div class="col-md-2 centered sq">
-      <br>
-      <i class="fa fa-spinner"></i>
-      <p class="text-sq-1">AC/Heating</p>
-      <p class="text-sq-2"><%= @place.ac_heater%></p>
-    </div>
-  </div>
-  
 
-  <br>
-  <br>
+    <div class="col-md-6">
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 8
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+          async defer></script>
+    </div>
+
+  </div>
 
 </div>
+
