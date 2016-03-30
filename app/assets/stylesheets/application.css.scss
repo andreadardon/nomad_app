@@ -25,9 +25,15 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700);
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: white;
+	margin-bottom: 60px;
 }
 
 h1 {
@@ -67,7 +73,8 @@ h1 {
 .navbar-inverse .navbar-nav > li > a {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	font-size: 14px;
+	text-transform: uppercase;
+	font-size: 16px;
 	color: white;
 }
 
@@ -84,14 +91,20 @@ a:hover {
 	text-decoration: none;
 }
 
+a.footer-description {
+	color: white;
+}
+
+
 
 .footer {
 	background-color: #BFCC3E;
 	color: white;
-	height: 60px;
+	position: absolute;
 	padding-top: 20px;
   bottom: 0;
   width: 100%;
+  height: 60px;
 }
 
 .footer-text {
@@ -111,13 +124,31 @@ a:hover {
 	border-radius: 0px;
 }
 
+.btn-header:hover {
+	background-color: transparent;
+	color: #CDDC39;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	border: 1px solid #CDDC39;
+	border-radius: 0px;
+}
+
 .btn-nomad {
 	background-color: #40334E;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 18px;
-	border: 1px solid white;
+	border-radius: 0px;
+}
+
+.btn-nomad:hover {
+	background-color: #40334E;
+	color: #CDDC39;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
 	border-radius: 0px;
 }
 
@@ -128,3 +159,13 @@ a:hover {
 .last-row {
 	padding-bottom: 50px;
 }
+
+.welcome-description {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	text-align: center;
+}
+
+
+
+

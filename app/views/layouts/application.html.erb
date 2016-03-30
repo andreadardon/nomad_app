@@ -28,32 +28,22 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", regions_path %></li>
-          <li><%= link_to "Create New Place", new_place_path %></li>
+          <li><%= link_to regions_path do %><span class="fa fa-globe fa-1x"></span> Find Places <% end %></li>
+          <li><%= link_to new_place_path do %><span class="fa fa-map-marker fa-1x"></span> Recommend a Place <% end %></li>
+         
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
 <%= yield %>
  
+
 <footer class="footer">
-  <div class="col-md-4">
-    <small>
-      <p class="pull-left">© 2016 - Nomad Approved</p>
-    </small>
+  <div class="col-md-12 centered">
+    <p class="pull-left">© 2016 - Nomad Approved</p>
+    <a href="http://medium.com/@AndreaDardon" target="_blank" class="pull-right footer-description"> <i class="fa fa-map"></i> Built while digital nomading through Germany and the Czech Republic.</a>
   </div>
-  <nav>
-    <div class="col-md-4 col-md-offset-2">
-      <ul>
-        <li><a href="http://andreadardon.com/web-design/" target="_blank" class="pull-right">Built by Andrea Dardón</a></li>
-      </ul>
-    </div>
-  </nav>
 </footer>
-
-
-
-
 
 
 </body>

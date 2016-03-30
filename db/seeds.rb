@@ -13,6 +13,12 @@ Place.create(name: "Seville, Spain", description: "Awesome apartment in a great 
 
 Place.create(name: "Gibraltar", description: "Charming apartment in Old Town, perfectly located. Gibraltar is very small so you can walk everywhere, but this apartment is very close to the Main Street. You have to go up several flights of stairs to reach it. The apartment is nicely decorated with a kitchen, bathroom, family and dining rooms. It can get very noisy with several constructions always going on around the neighborhood.", created_at: "2016-01-05 17:34:22", updated_at: "2016-01-14 17:05:00", image_url: "gibraltar1.png", internet_speed: "Over 30mps", short_term_rental: "Yes", level_of_noise: "Bad", walkability: "Great", food: "Accessible", ac_heater: "Heater")
 
+Place.create(name: "Hakuna Matata Guest House", description: "Beautiful house with comfortable rooms with private bathrooms. The location is perfect to walk around town and it is inside a gated community. The house has a terrace from where you have an amazing view of three volcanoes. The owner, Eugenia, is incredibly nice.", created_at: "2016-03-30 18:32:46", updated_at: "2016-03-30 18:37:07", image_url: nil, internet_speed: "<10mbps", short_term_rental: "Yes", level_of_noise: "Quiet", walkability: "Great", food: nil, ac_heater: nil, link: "https://www.facebook.com/Hakuna-Matata-Guest-House...", city: "Antigua Guatemala", type: nil, country_id: 92)
+
+Place.create(name: nil, description: "Great apartment very close to the city center. There is a metro station and supermarket just outside the building. It has two rooms and can fit up to 4 people. The hosts are super nice!", created_at: "2016-03-30 18:40:03", updated_at: "2016-03-30 18:40:03", image_url: nil, internet_speed: ">30mbps", short_term_rental: "Yes", level_of_noise: "Quiet", walkability: "Okay", food: nil, ac_heater: nil, link: "https://www.airbnb.com/rooms/5100076", city: "Prague", type: nil, country_id: 61)
+
+Place.create(name: nil, description: "Beautiful traditional balinese bungalow in Ubud.", created_at: "2016-03-30 18:57:12", updated_at: "2016-03-30 18:57:12", image_url: nil, internet_speed: "<10mbps", short_term_rental: "Yes", level_of_noise: "Okay", walkability: "Okay", food: nil, ac_heater: nil, link: "https://www.airbnb.com/rooms/372543", city: "Ubud", type: nil, country_id: 105)
+
 latin_america = Region.create(name: "Latin America", image_url:"latin-america.png")
 
 north_america = Region.create(name: "North America", image_url:"north-america.png")

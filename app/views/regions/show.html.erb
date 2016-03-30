@@ -10,23 +10,22 @@
 	</div>
 	
 	<% @region.places.each do |p| %>
-	  <div class="row">
+	  <div class="row last-row-places">
 		  <div class="col-md-12 show-region">
 		  	<div class="row">
-		  		<div class="col-md-8 show-description">
-				  	<strong><%= p.city %></strong>
-				  	<br>
-						<%= truncate(p.description,:length => 140)  %>
+		  		<div class="col-md-8">
+				  	<h4 class="place-title"><%= p.city %>, <%= p.country.name %> </h4>
+						<h4 class="place-description"><%= truncate(p.description,:length => 140) %><h4 class="place-title">
 					</div>
 					<div class="col-md-2 col-md-offset-2">
-						<div clas="flag-wrapper">
+						<div class="flag-wrapper">
 				  		<img src="../assets/flags/1X1/<%= p.country.image_url %>" class="img-circle flag">
 				  	</div>
 				  </div>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-					<%= link_to "See More", p, :class => "btn btn-default" %>
+					<%= link_to "See More", p, :class => "btn btn-nomad" %>
 					</div>
 				</div>
 		  </div>
