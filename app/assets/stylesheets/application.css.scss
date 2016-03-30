@@ -20,6 +20,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700);
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: white;
@@ -50,25 +55,76 @@ h1 {
 
 .navbar {
 	background-color: #40334E;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 }
 
 .nav {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 400;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: white;
+}
+
+.navbar-inverse {
+	border-color: #40334E;
+}
+
+a { 
+	color: #333; 
+}
+
+a:hover { 
+	color: #333; 
+	text-decoration: none;
 }
 
 
 .footer {
 	background-color: #BFCC3E;
+	color: white;
 	height: 60px;
 	padding-top: 20px;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
 	color: white;
 }
 
+
+.btn-header {
+	background-color: transparent;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	border: 1px solid white;
+	border-radius: 0px;
+}
+
+.btn-nomad {
+	background-color: #40334E;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	border: 1px solid white;
+	border-radius: 0px;
+}
+
+.second-row {
+	padding-bottom: 30px;
+}
+
+.last-row {
+	padding-bottom: 50px;
+}

@@ -1,31 +1,42 @@
-<div class="container">
-  <div class="row header">
-    <div class="col-md-12 centered">
-      <h1 class="page-title">Places Around the World fit for Digital Nomads</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <p class="page-description centered">We're not just tourists. We're Digital Nomads and it can be hard to find places <br> that fit our requirements: High-Speed Internet, short term leases, a good city. <br><br> Click on a region of the world to find places that have been approved by nomads like you! </p>
-    </div>
-  </div>
-  <div class="row first-row-regions">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="row">
-        <% @regions.all.each do |r| %>
-          <%= link_to r do %>
-            <div class="col-md-4  ">
-              <div style="position: relative;" class="region-tile">
-                <div class="centered region-image" >
-                  <br>
-                  <img src="../assets/<%= r.image_url %>" style="height: 120px;">
-                  <p style="font-size:12px;"><%= r.name %></p>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+<div id="headerwrap">
+  <header class="">
+    <img src="../assets/NomadAppLogo.png" alt="Nomad Approved" style="height:80px;">
+    <h1 class="page-title">Places Around the World fit for Digital Nomads</h1>
+      <br>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h4 class="header-description centered">We're not just tourists. We're Digital Nomads and it can be hard to find places that fit our requirements. Nomad Approved collects places that Digital Nomads have lived and worked from around the world and would recommend to others.</h4> 
       </div>
     </div>
+    <br>
+    <br>
+    <%= link_to "Share your Experiences with Other Nomads", new_place_path, class: "btn btn-header"  %>
+<!--     <button class="btn btn-header" type="button">Share your Experiences with Other Nomads</button> -->  
+  </header>     
+</div>
+<div class="container-fluid">
+<div class="row first-row-regions">
+  <div class="col-md-6 col-md-offset-3">
+    <p class="page-description">Click on a region of the world to find places that have been approved by nomads like you!</p>
+    <br>
   </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="row regions-row">
+      <% @regions.all.each do |r| %>
+        <%= link_to r do %>
+          <div class="col-md-4">
+            <div style="position: relative;" class="region-tile">
+              <div class="centered region-image" >
+                <br>
+                <img src="../assets/<%= r.image_url %>" style="height: 150px;">
+                <p class="tile-text"><%= r.name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
 </div>

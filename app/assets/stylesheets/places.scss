@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -16,16 +15,7 @@ body {
 	padding-bottom: 20px;
 }
 
-.page-title {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-}
 
-.page-description {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-}
 
 .place-box {
 	height: 400px;
@@ -34,6 +24,7 @@ body {
     background-position: center;
     background-clip: border-box;
 }
+
 
 .places {
 	padding-top: 20px;
@@ -79,35 +70,32 @@ body {
 	color: #797979;
 }
 
-.region-tile {
-	background-color: #F1F1F1;
-}
 
-.first-row-regions {
-	padding-bottom: 20px;
-}
-
-.second-row-regions {
-	padding-bottom: 50px;
-}
 
 /*Show Page*/
 
+.show {
+	height: 80vh;
+}
 
 .sq {
-/*	background-color: #40334E;*/
-/*	border: solid 4px white;*/
+	background-color: #F1F1F1;
+/*	border-radius: 6px;*/
 	color: #333;
-	height: 10em;
-	padding-top: 20px;
+/*	height: 20em;*/
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .text-sq-1 {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: 14px;
+	font-weight: 700;
 }
 
+.text-sq-2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
 
 .show-title {
 	font-family: 'Open Sans', sans-serif;
@@ -117,7 +105,13 @@ body {
 .show-description {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+	font-size: 16px;
+	text-align: justify;
 }
+
+/*.bookplace {
+	padding-top: 120px;
+}*/
 
 /*Show Region*/
 

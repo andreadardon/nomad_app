@@ -1,65 +1,59 @@
 <style>
   .fa {
     color: #CDDC39;
-    font-size: 30px;
+    font-size: 40px;
   }
 </style>
 
 <p id="notice"><%= notice %></p>
 
-<div class="container">
+<div class="container show">
 
-  <div class="row">
+  <div class="row second-row">
     <br>
     <div class="col-md-12 centered">
-      <h3 class="show-title"><%= @place.name %></h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2 col-md-offset-2 centered sq">
-      <br>
-      <i class="fa fa-wifi"></i>
-      <p class="text-sq-1">Internet Speed <br> <%= @place.internet_speed %></p>
-    </div>
-    <div class="col-md-2 centered sq">
-      <br>
-      <i class="fa fa-suitcase"></i>
-      <p class="text-sq-1">Type of Place <br> <%= @place.type %></p>
-    </div>
-    <div class="col-md-2 centered sq">
-      <br>
-      <i class="fa fa-street-view"></i>
-      <p class="text-sq-1">Walkability <br> <%= @place.walkability%></p>
-    </div>
-    <div class="col-md-2 centered  sq">
-      <br>
-      <i class="fa fa-bullhorn"></i>
-      <p class="text-sq-1">Level of Noise <br> <%= @place.level_of_noise %></p>
+      <h3 class="show-title"><%= @place.city %>, <%= @place.country.name %></h3>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-4">
-      <h5 class="show-description"><%= @place.description %></h5>
-      <p class="show-description"><a class="bookplace" href="<%= @place.link %>" target="_blank">Book This Place</a></p>
-    </div>
-
+  <div class="row first-row">
     <div class="col-md-6">
-      <div id="map"></div>
-      <script>
-        function initMap() {
-          var mapDiv = document.getElementById('map');
-          var map = new google.maps.Map(mapDiv, {
-            center: {lat: 44.540, lng: -78.546},
-            zoom: 8
-          });
-        }
-      </script>
-      <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-          async defer></script>
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1 centered sq">
+          <br>
+          <i class="fa fa-wifi"></i>
+          <h4 class="text-sq-2">Internet Speed </h4>
+          <h3 class="text-sq-1"> <%= @place.internet_speed %></h3>
+        </div>
+        <div class="col-md-5 col-md-offset-1 centered sq">
+          <br>
+          <i class="fa fa-suitcase"></i>
+          <h4 class="text-sq-2">Type of Place </h4>
+          <h3 class="text-sq-1"> <%= @place.type %></h3>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-md-5 col-md-offset-1 centered sq">
+          <br>
+          <i class="fa fa-street-view"></i>
+          <h4 class="text-sq-2">Walkability </h4>
+          <h3 class="text-sq-1"> <%= @place.walkability%></h3>
+        </div>
+        <div class="col-md-5 col-md-offset-1 centered  sq">
+          <br>
+          <i class="fa fa-bullhorn"></i>
+          <h4 class="text-sq-2">Level of Noise </h4>
+          <h3 class="text-sq-1"> <%= @place.level_of_noise %></h3>
+        </div>
+      </div>
     </div>
-
+    <div class="col-md-4 col-md-offset-1 centered">
+      <br>
+      <h5 class="show-description"><%= @place.description %></h5>
+      <br> <h4 class="text-sq-1"><a href="<%= @place.link %>" target="_blank">Book This Place</h4></p>
+    </div>
   </div>
-
+  
 </div>
 
