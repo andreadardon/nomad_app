@@ -11,65 +11,64 @@
     </div>
   <% end %>
 
-    <div class="form-group">
-      <%= f.label :city_or_town, {class: "col-md-5 form-label"} %>
-      <div class="col-md-4">
-        <%= f.text_field :city, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :country, {class: "col-md-5 form-label"}  %>
-      <div class="col-md-4">
-      <%= f.collection_select :country_id, Country.all, :id, :name, {}, {class: "form-control"} %>
-       </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :is_this_a_short_term_rental_?, {class: "col-md-5 form-label"}  %>
-      <div class="col-md-4">
-        <%= f.select :short_term_rental, [['Yes','Yes'],['No','No']], {}, {class: "form-control"} %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :internet_speed, {class: "col-md-5 form-label"} %>
-      <div class="col-md-4">
-        <%= f.select :internet_speed, [['<10mbps','<10mbps'],['10mbps-30mbps','10mbps-30mbps'],['>30mbps','>30mbps']], {}, {class: "form-control"} %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :description, {class: "col-md-5 form-label"} %>
-      <div class="col-md-4">
-        <%= f.text_area :description, :cols => "50", :rows => "10",  class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :level_of_noise, {class: "col-md-5 form-label"} %>
-      <div class="col-md-4">
-        <%= f.select :level_of_noise, [['Quiet','Quiet'],['Okay','Okay'],['Noisy','Noisy']], {}, {class: "form-control"} %>
-      </div>
-    </div>
-    <div class="form-group">
-      <%= f.label :walkability, {class: "col-md-5 form-label"}  %>
-      <div class="col-md-4">
-        <%= f.select :walkability, [['Great','Great'],['Okay','Okay'],['Bad','Bad']], {}, {class: "form-control"} %>
-      </div>
-    </div>
-  
-    <div class="form-group">
-      <%= f.label :link_to_book_this_place, {class: "col-md-5 form-label"}  %>
-      <div class="col-md-4">
-        <%= f.text_field :link, class: "form-control" %>
-      </div>
+  <div class="form-group">
+    <%= f.label :city_or_town, {class: "col-md-5 form-label"} %>
+    <div class="col-md-4">
+      <%= f.text_field :city, class: "form-control" %>
     </div>
   </div>
+
+  <div class="form-group">
+    <%= f.label :country, {class: "col-md-5 form-label"}  %>
+    <div class="col-md-4">
+      <%= f.collection_select :country_id, Country.all, :id, :name, {}, {class: "form-control"} %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :is_this_a_short_term_rental_?, {class: "col-md-5 form-label"}  %>
+    <div class="col-md-4">
+      <%= f.select :short_term_rental, [['Yes','Yes'],['No','No']], {}, {class: "form-control"} %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :internet_speed, {class: "col-md-5 form-label"} %>
+    <div class="col-md-4">
+      <%= f.select :internet_speed, [['<10mbps','<10mbps'],['10mbps-30mbps','10mbps-30mbps'],['>30mbps','>30mbps']], {}, {class: "form-control"} %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, {class: "col-md-5 form-label"} %>
+    <div class="col-md-4">
+      <%= f.text_area :description, :cols => "50", :rows => "10",  class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :level_of_noise, {class: "col-md-5 form-label"} %>
+    <div class="col-md-4">
+      <%= f.select :level_of_noise, [['Quiet','Quiet'],['Okay','Okay'],['Noisy','Noisy']], {}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :walkability, {class: "col-md-5 form-label"}  %>
+    <div class="col-md-4">
+      <%= f.select :walkability, [['Great','Great'],['Okay','Okay'],['Bad','Bad']], {}, {class: "form-control"} %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_to_book_this_place, {class: "col-md-5 form-label"}  %>
+    <div class="col-md-4">
+      <%= f.text_field :link, class: "form-control" %>
+    </div>
+  </div>
+
   <div class="form-group">
     <div class="col-md-4 col-md-offset-5 last-row-btn centered actions">
       <%= f.submit "Submit", {class: "btn btn-nomad"}  %>
     </div>
   </div>  
 <% end %>
-
