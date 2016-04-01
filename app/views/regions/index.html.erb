@@ -5,8 +5,10 @@
       <p class="page-description">Click on a region of the world to find places that have been approved by nomads like you!</p>
       <br>
     </div>
+  </div>
+  <div class="row last-row-regions">
     <div class="col-md-8 col-md-offset-2">
-      <div class="row regions-row">
+      <div class="row region-row">
         <% @regions.all.each do |r| %>
           <%= link_to r do %>
             <div class="col-md-4">

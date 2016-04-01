@@ -19,17 +19,17 @@ Place.create(name: nil, description: "Great apartment very close to the city cen
 
 Place.create(name: nil, description: "Beautiful traditional balinese bungalow in Ubud.", created_at: "2016-03-30 18:57:12", updated_at: "2016-03-30 18:57:12", image_url: nil, internet_speed: "<10mbps", short_term_rental: "Yes", level_of_noise: "Okay", walkability: "Okay", food: nil, ac_heater: nil, link: "https://www.airbnb.com/rooms/372543", city: "Ubud", type: nil, country_id: 105)
 
-latin_america = Region.create(name: "Latin America", image_url:"latin-america.png")
+latin_america = Region.create(name: "Latin America", image_url:"latin-america.png", cover_image_url: "latin-americabig.jpg")
 
-north_america = Region.create(name: "North America", image_url:"north-america.png")
+north_america = Region.create(name: "North America", image_url:"north-america.png", cover_image_url: "north-americabig.jpg")
 
-europe = Region.create(name: "Europe", image_url:"europe.png")
+europe = Region.create(name: "Europe", image_url:"europe.png", cover_image_url: "europebig.jpg")
 
-asia = Region.create(name: "Asia", image_url:"asia.png")
+asia = Region.create(name: "Asia", image_url:"asia.png", cover_image_url: "asiabig.jpg")
 
-africa = Region.create(name: "Africa", image_url:"africa.png")
+africa = Region.create(name: "Africa", image_url:"africa.png", cover_image_url: "africabig.jpg")
 
-sea = Region.create(name: "South East Asia, Australia and New Zealand",  image_url:"../assets/oceania.png")
+sea = Region.create(name: "South East Asia, Australia and New Zealand",  image_url:"../assets/oceania.png", cover_image_url: "seasiabig.jpg)
 
 
 Country.create(name: "Afghanistan" , alpha2: "AF", region: asia, image_url: "af.svg")

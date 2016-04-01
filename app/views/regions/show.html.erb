@@ -1,37 +1,46 @@
 <p id="notice"><%= notice %></p>
 
+<div class="headerwrap-region" style="background: linear-gradient( rgba(20,20,20, .5), rgba(20,20,20, .5)), url(../assets/<%= @region.cover_image_url %>) no-repeat center top;
+	margin-top: -50px;
+	padding-top:200px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 500px;
+	width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  <header class="">
+	  <h1 class="page-title"><%= @region.name %></h1>
+  </header>     
+</div>
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3 centered">
-		  <h1><%= @region.name %></h1>
-		  <br>
-	  </div>
-	</div>
 	
-	<% @region.places.each do |p| %>
-	  <div class="row last-row-places">
-		  <div class="col-md-12 show-region">
-		  	<div class="row">
-		  		<div class="col-md-8">
+  <div class="row last-row-regions">
+  	<div class="col-md-12">
+  		<div class="row region-row">
+  			<% @region.places.each do |p| %>
+		  		<div class="col-md-3 col-md-offset-1 region-show-tile" style="margin-bottom: 20px; margin-top: 20px;">
 				  	<h4 class="place-title"><%= p.city %>, <%= p.country.name %> </h4>
-						<h4 class="place-description"><%= truncate(p.description,:length => 140) %><h4 class="place-title">
-					</div>
-					<div class="col-md-2 col-md-offset-2">
-						<div class="flag-wrapper">
-				  		<img src="../assets/flags/1x1/<%= p.country.image_url %>" class="img-circle flag">
+				  	<div class="flag-wrapper">
+				  		<img src="../assets/flags/1x1/<%= p.country.image_url %>" class="img-circle flag" style="height: 30px; width: auto;">
 				  	</div>
-				  </div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-					<%= link_to "See More", p, :class => "btn btn-nomad" %>
+						<p class="place-description"><%= truncate(p.description,:length => 130) %></p>
+				  	<%= link_to "See More", p, :class => "btn btn-nomad" %>
 					</div>
-				</div>
-		  </div>
+				<% end %>
+		 	 </div>
 	  </div>
-	  <br>
-  <% end %>
+  </div>
+
 
   <% if @region.places.empty? %>
   <div class="row region-empty-row">
